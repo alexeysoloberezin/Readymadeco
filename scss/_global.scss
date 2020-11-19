@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700;800&family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700;800;900&family=Lato:wght@400;700&display=swap');
 
 $main: #2DD3C5;
 $text: #404040;
@@ -33,6 +33,15 @@ a:focus,
 a:active,
 a:visited {
   text-decoration: none;
+}
+
+.global__title {
+  font-weight: 800;
+  font-family: $inter;
+  @include adaptiv-font(60, 35);
+  line-height: 1;
+  position: relative;
+  z-index: 11;
 }
 
 .burger {
@@ -80,7 +89,7 @@ body {
 .container {
   max-width: 1170px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 20px;
 }
 
 .header {
@@ -187,7 +196,7 @@ body {
     span {
       color: $main;
       text-transform: uppercase;
-      @include adaptiv-font(144, 60);
+      @include adaptiv-font(140, 60);
       font-weight: 900;
     }
   }
@@ -229,14 +238,19 @@ body {
     }
   }
 }
+
 .main {
-  &__title {   
+  position: relative;
+  z-index: 7;
+
+  &__title {
     font-weight: 700;
     font-family: $inter;
     @include adaptiv-font(35, 24);
 
   }
-  &__subtitle{
+
+  &__subtitle {
     @include adaptiv-font(25, 18);
   }
 }
@@ -244,7 +258,9 @@ body {
 .footer {
   background: linear-gradient(61.35deg, #FFFFFF 0%, #ECF3FA 21.21%, #C2D9ED 100%);
   padding-top: 60px;
-  
+  position: relative;
+  z-index: 7;
+
   &__title {}
 
   &__wrapper {
@@ -254,7 +270,7 @@ body {
 
   &__list {
     width: 25%;
-    margin: 10px 0 50px 0 ;
+    margin: 10px 0 50px 0;
   }
 
   &__item {
@@ -266,7 +282,8 @@ body {
     color: $text;
     position: relative;
     display: inline-block;
-    &:before{
+
+    &:before {
       content: '';
       position: absolute;
       bottom: 0;
@@ -279,19 +296,23 @@ body {
 
 
     }
-    &:hover:before{
+
+    &:hover:before {
       transform: translateX(-50%) scaleX(1);
     }
   }
-  &__text{
+
+  &__text {
     margin-top: 10px;
     font-size: 16px;
     padding-right: 45px;
   }
-  &__inner{
+
+  &__inner {
     width: 25%;
   }
-  &__row{
+
+  &__row {
     margin-top: 40px;
     display: flex;
     align-items: center;
@@ -299,22 +320,25 @@ body {
     padding: 25px 0 35px 0;
     border-top: 1px solid rgba(#404040, 0.2);
   }
-  &__logo{
+
+  &__logo {
     flex: 0 0 224px;
     transform: translateY(11px);
   }
+
   &__nav {
     flex-grow: 1;
-    margin: 0 40px ;
+    margin: 0 40px;
   }
 
   &__nav-list {
     display: flex;
     align-items: center;
     justify-content: space-between;
-  
+
   }
-  &__subtext{
+
+  &__subtext {
     color: #AEAEAE;
     font-weight: 600;
     font-size: 14px;
@@ -326,7 +350,8 @@ body {
     color: $text;
     font-size: 14px;
     transition: .25s;
-    &:hover{
+
+    &:hover {
       color: #000
     }
   }
@@ -336,7 +361,8 @@ body {
     align-items: center;
     white-space: nowrap;
     margin-right: 40px;
-    img{
+
+    img {
       margin-right: 5px;
       width: 16px;
     }
@@ -351,14 +377,15 @@ body {
   }
 
   &__mail {
-    display: flex;   
+    display: flex;
     align-items: center;
-    img{
+
+    img {
       margin-right: 5px;
       margin-top: 4px;
       width: 17px;
     }
- 
+
   }
 
   &__mailto {
@@ -368,7 +395,8 @@ body {
     white-space: nowrap;
     position: relative;
     display: inline-block;
-    &:before{
+
+    &:before {
       content: '';
       position: absolute;
       bottom: 0;
@@ -406,12 +434,15 @@ body {
     font-size: 16px;
     padding: 15px 23px;
   }
-  .footer__nav{
+
+  .footer__nav {
     margin: 0 15px;
   }
-  .footer__phone{
+
+  .footer__phone {
     margin-right: 15px;
   }
+
   .footer__tel {
     font-size: 14px;
   }
@@ -435,28 +466,35 @@ body {
     margin-left: 3px;
     margin-top: 10px;
   }
-  .footer__logo{
+
+  .footer__logo {
     flex: 0 0 150px;
   }
-  .footer__row{
+
+  .footer__row {
     position: relative;
   }
-  .footer__phone{
+
+  .footer__phone {
     position: absolute;
     right: -15px;
     bottom: 17px;
   }
+
   .footer__link {
     font-size: 15px;
   }
-  .footer__list{
+
+  .footer__list {
     padding-right: 5px;
-  } 
-  .footer__inner{
+  }
+
+  .footer__inner {
     width: 50%;
     margin: 20px 0;
   }
-  .footer__text{
+
+  .footer__text {
     margin-top: 0;
   }
 }
@@ -466,7 +504,7 @@ body {
     display: block;
   }
 
-  
+
 
   .header__row {
     z-index: 300;
@@ -509,38 +547,46 @@ body {
     position: relative;
     z-index: 5;
   }
-  .header__image-wave{
+
+  .header__image-wave {
     height: 73%;
   }
 }
 
-@media (max-width:767px){
-  .footer__list{
+@media (max-width:767px) {
+  .footer__list {
     width: 50%;
   }
+
   .footer {
     padding-top: 25px;
   }
-  .footer__wrapper{
+
+  .footer__wrapper {
     flex-wrap: wrap;
-    .footer__list:nth-child(2n){
+
+    .footer__list:nth-child(2n) {
       padding-left: 15px;
     }
   }
+
   .footer__list {
     margin: 10px 0;
   }
-  .footer__nav{
+
+  .footer__nav {
     position: absolute;
     top: 10px;
     left: 45%;
     width: 80%;
     transform: translateX(-50%);
   }
+
   .footer__row {
     padding: 30px 0 35px 0;
   }
-  .footer__title{
+
+  .footer__title {
     margin-top: 20px
   }
 }
@@ -549,7 +595,8 @@ body {
   .header__image {
     transform: translateX(-200px);
   }
-  .footer__inner{
+
+  .footer__inner {
     width: 100%;
     margin: 10px 0;
   }
@@ -576,22 +623,28 @@ body {
   .header__bulls {
     margin-top: 50px;
   }
-  .footer__nav{    
-    width: 100%;    
+
+  .footer__nav {
+    width: 100%;
     left: 46%;
   }
+
   .footer__mailto {
     font-size: 13px;
   }
-  .footer__nav-link{
+
+  .footer__nav-link {
     font-size: 13px;
   }
-  .footer__subtext{
+
+  .footer__subtext {
     font-size: 12px;
   }
+
   .footer__tel {
     font-size: 13px;
   }
+
   .footer__logo {
     flex: 0 0 117px;
   }
@@ -626,4 +679,36 @@ body {
   .burger-line__bottom {
     transform: translate(-50%, -210%) rotate(45deg);
   }
+}
+
+.header__line {
+  min-height: initial;
+  height: 70px;
+}
+
+@media (max-width:800px) {
+  .header__line .header__row {
+    padding-top: 10px;
+  }
+}
+
+.header__image-wavemin {
+  height: initial !important;
+}
+
+.seo__bul1 {
+  position: absolute;
+  bottom: -150px;
+  right: 7%;
+}
+
+.footer {
+  position: relative;
+}
+
+.footer__ellipse1 {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  z-index: -1;
 }
