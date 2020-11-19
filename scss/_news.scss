@@ -434,3 +434,16 @@
     left: 0px;
   }
 }
+
+.header__image-wave-mob{
+  display: none;
+}
+@media (max-width:767px){
+  .header__image-wave-mob{
+    display: block;
+    width: initial;
+  }
+  .header__image-wave-desc{
+    display: none;
+  }
+}
