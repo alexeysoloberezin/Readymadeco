@@ -164,6 +164,11 @@
     font-size: 18px;
     line-height: 160%;
     margin: 10px 40px 40px 0;
+    transition: 0.2s;
+    color: $text;
+    &:hover{
+      color: rgba($text, 0.7);
+    }
   }
 
   &__aside-date {
@@ -188,6 +193,11 @@
   &__posts {
     font-size: 18px;
     white-space: nowrap;
+    transition: 0.2s;
+    color: $text;
+    &:hover{
+      color: rgba($text, 0.7);
+    }
   }
 
 
