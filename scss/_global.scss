@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700;800;900&family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700;800;900&family=Lato:wght@400;600;700&display=swap');
 
 $main: #2DD3C5;
 $text: #404040;
@@ -246,7 +246,7 @@ body {
   &__title {
     font-weight: 700;
     font-family: $inter;
-    @include adaptiv-font(35, 24);
+    @include adaptiv-font(33, 24);
 
   }
 
