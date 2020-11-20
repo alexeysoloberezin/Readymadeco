@@ -107,7 +107,7 @@
               <div class="table__info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur</div>
               <div class="table__inner">
                 <p class="table__price">8 000€</p>
-                <a class="table__buy" href="#">Buy</a>
+                <button class="table__buy" >Buy</button>
               </div>
             </div>
             <div class="table__wrapper">
@@ -122,7 +122,7 @@
               <div class="table__info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur</div>
               <div class="table__inner">
                 <p class="table__price">17 500€</p>
-                <a class="table__buy" href="#">Buy</a>
+                <button class="table__buy" >Buy</button>
               </div>
             </div>
             <div class="table__wrapper">
@@ -137,7 +137,7 @@
               <div class="table__info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur</div>
               <div class="table__inner">
                 <p class="table__price">22 000€</p>
-                <a class="table__buy" href="#">Buy</a>
+                <button class="table__buy">Buy</button>
               </div>
             </div>
             <div class="table__wrapper">
@@ -153,7 +153,7 @@
               <div class="table__info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur</div>
               <div class="table__inner">
                 <p class="table__price">25 000€</p>
-                <a class="table__buy" href="#">Buy</a>
+                <button class="table__buy" >Buy</button>
               </div>
             </div>
           </div>          
@@ -379,8 +379,91 @@
       </div>
       
     </footer>
+    <div class="popup">
+      
+      <img class="popup-bul1" src="image/bulits.svg" alt="">
+      <img class="popup-bul2" src="image/bulits.svg" alt="">    
+      <img class="popup__wave" src="image/home/header-wave.png" alt="">
+      <div class="container">
+        <div class="popup__flex">
+          <div class="popup__wrapper">
+            <div class="popup-exit"></div>
+            <div class="popup__inner">
+              <div class="popup__line">
+                <div>
+                  <h3 class="popup__title">Purchase form</h3>
+                  <p class="popup__text">Poland company with bank account</p>
+                </div>             
+                <div class="popup__price-inner">
+                  <p class="popup__text">Price:</p>
+                  <p class="popup__price">25 000€</p>
+                </div>
+              </div>
+              
+              <form>
+                <div class="popup__inr">
+                  <div class="popup__box">
+                    <label class="popup__label">Name</label>
+                    <input class="popup__name popup__inp" type="text" name="popup__name" placeholder="Sergei">
+                  </div>
+                  <div class="popup__box">
+                    <label class="popup__label">Email</label>
+                    <input class="popup__mail popup__inp" type="email" name="popup__mail" placeholder="hello@hey.com">
+                  </div>
+                  <div class="popup__box">
+                    <label class="popup__label">Phone</label>
+                    <input class="popup__phone popup__inp" type="text" name="popup__phone" placeholder="+44 (203) 769-29-01">
+                  </div>
+                </div>
+                
+                <div class="popup__box-text">
+                  <label class="popup__label">Message</label>
+                  <textarea class="popup__textarea" name="popup__textarea" cols="30" rows="10" placeholder="Type here"></textarea>
+                </div>
+                <div class="popup__btn-inner">
+                  <button class="popup__btn">Send</button>
+                </div>
+              </form>
+            </div>
+            
+          </div>
+          <ul class="popup__list">
+            <li class="popup__item">
+              <a href="#">
+                <img src="image/icons/sitemap.svg" alt="">
+                Site map
+              </a>
+            </li>
+            <li class="popup__item">
+              <a href="#">
+                <img src="image/icons/Wallet.svg" alt="">
+                Public offer
+              </a>
+            </li>
+            <li class="popup__item">
+              <a href="#">
+                <img src="image/icons/pop-geo.svg" alt="">
+                Address
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+      </div>
+    </div>
   </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+  <script>
+    $('.table__buy').click(function(){
+      $('.popup').addClass('popup-active');
+      $('body').addClass('fixed');
+    });
+    $('.popup-exit').click(function(){
+      $('.popup').removeClass('popup-active');
+      $('body').removeClass('fixed');
+    });
 
+  </script>
   <script src="js/script.js"></script>
 </body>
 </html>
