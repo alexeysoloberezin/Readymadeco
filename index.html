@@ -461,6 +461,14 @@
     $('.popup-exit').click(function(){
       $('.popup').removeClass('popup-active');
       $('body').removeClass('fixed');
+    }); 
+    $('.header__bull').click(function(){
+      if (this.classList.contains('bull-active')){
+        this.addClass('bull-active');
+      } else{
+        $('.header__bull').removeClass('bull-active');
+        this.classList.add('bull-active')
+      }
     });
 
   </script>
